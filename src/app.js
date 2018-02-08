@@ -14,6 +14,7 @@ class App extends React.Component {
         // binding of this will now pass 'this' to onClick
         // otherwise onclick will return undefined
         this.onClick = this.onClick.bind(this);
+        this.onReset = this.onReset.bind(this);
 
         // you only approach this state directly inside the constructor
         this.state = {
@@ -31,7 +32,13 @@ class App extends React.Component {
             click: this.state.click + 1,
             labels: labels
         })
-        console.log();
+    }
+
+    onReset(e){
+        this.setState({
+            click: 0,
+            labels:[]
+        })
     }
 
     render(){
@@ -46,18 +53,19 @@ class App extends React.Component {
             <ReactCSSTransitionGroup transitionName='app' transitionAppear={true} 
                 transitionAppearTimeout={500} transitionEnterTimeout={500}
                 transitionLeaveTimeout={500}>
+                {/* times have to match scss */}
                 <Jumbotron className="-fluid custom" containerFluid={true}>
                         <h1>Building React user interfaces </h1>
                         <p>with bootstrap and SASS</p>
                         <p>
                             <Button className="-primary" href="http://exceedingstatusdo.com" target="_blank" label="Button 1"/>
-                            <Button className="-danger -sm" label="Button 2"/>
+                            <Button onClick={this.onReset} className="-danger -sm" label="Reset"/>
                         </p>
                     <Button onClick={this.onClick} className="-primary -lg -block" label={this.state.click}/>
                     
                     {/* another react transition group is necessary because the {buttons} are a deeper child */}
                     <ReactCSSTransitionGroup transitionName='app'
-                        transitionEnterTimeout={5000} transitionLeaveTimeout={500}>
+                        transitionEnterTimeout={500} transitionLeaveTimeout={500}>
                         {buttons}
                     </ReactCSSTransitionGroup>
                 </Jumbotron>

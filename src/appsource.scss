@@ -18,18 +18,30 @@ $text-color: yellow;
 // for css animations
 .app-appear {
     opacity: 0.01;
+
+    // adds the class name above to the below class
+    &-active {
+        opacity: 1;    
+        transition: opacity .5s ease-in;
+    }
 }
 
-.app-appear-active {
-    opacity: 1;    
-    transition: opacity .5s ease-in;
-}
 
 .app-enter {
     opacity: 0.01;
+
+    &-active {
+        opacity: 1;    
+        transition: opacity 500ms ease-in;
+    }
 }
 
-.app-enter-active {
-    opacity: 1;    
-    transition: opacity 5s ease-in;
+
+.app-leave {
+    opacity: 1;
+
+    &-active {
+        opacity: 0;    
+        transition: opacity 500ms ease-out;
+    }
 }
