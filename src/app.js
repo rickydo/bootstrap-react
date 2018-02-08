@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from './bootstrap/button';
 
 class App extends React.Component {
     render(){
@@ -6,7 +7,7 @@ class App extends React.Component {
         <div className="container">
             <h1>Building React user interfaces </h1>
             <p>with bootstrap and SASS</p>
-            <p><a className="btn btn-primary" href="http://exceedingstatusdo.com" target="_blank">My Website</a></p>
+            <p><Button /></p>
         </div>
     </div>)
     }
