@@ -8,10 +8,10 @@ class App extends React.Component {
             <h1>Building React user interfaces </h1>
             <p>with bootstrap and SASS</p>
             <p>
-                <Button className="btn btn-primary" href="http://exceedingstatusdo.com" target="_blank"/>
-                <Button className="btn btn-danger" />
+                <Button className="btn-primary" href="http://exceedingstatusdo.com" target="_blank"/>
+                <Button className="btn-danger-outline btn-sm" />
             </p>
-
+            <Button className="btn-primary-outline btn-lg btn-block" />
         </div>
     </div>)
     }
