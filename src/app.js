@@ -7,7 +7,11 @@ class App extends React.Component {
         <div className="container">
             <h1>Building React user interfaces </h1>
             <p>with bootstrap and SASS</p>
-            <p><Button className="btn btn-primary" href="http://exceedingstatusdo.com" target="_blank"/></p>
+            <p>
+                <Button className="btn btn-primary" href="http://exceedingstatusdo.com" target="_blank"/>
+                <Button className="btn btn-danger" href="http://exceedingstatusdo.com"/>
+            </p>
+
         </div>
     </div>)
     }
