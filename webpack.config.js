@@ -1,3 +1,4 @@
+// webpack is for development server
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -22,6 +23,10 @@ module.exports = {
             {
                 test: /\.css$/, 
                 loader: ExtractTextPlugin.extract(['css-loader'])
+            },
+            {
+                test: /\.(sass|scss)$/,
+                loader: ExtractTextPlugin.extract(['css-loader', 'sass-loader'])
             }
         ]
     },
@@ -29,3 +34,6 @@ module.exports = {
         new ExtractTextPlugin("app.css")
     ]
 };
+
+// sass is more minimalistic typing
+// scss is more readable

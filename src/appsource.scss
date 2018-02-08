@@ -1,0 +1,8 @@
+$image: url(/img/tree-3097419_960_720.jpg);
+$text-color: yellow;
+
+.custom {
+    background-image: $image; 
+    color: $text-color; 
+    background-size: cover;
+}
