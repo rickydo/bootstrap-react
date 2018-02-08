@@ -2,13 +2,17 @@
 // @import "../node_modules/bootstrap/scss/bootstrap";
 // a mixin is a function or wrapper that duplicates something
 // you do often 
-@mixin 
+@mixin background-it($path){
+    background-image: $path;
+    color:white;
+}
 
 $image: url(/img/tree-3097419_960_720.jpg);
 $text-color: yellow;
 
 .custom {
-    background-image: $image; 
-    color: $text-color; 
-    background-size: cover;
+    @include background-it($image)
+    // background-image: $image; 
+    // color: $text-color; 
+    // background-size: cover;
 }

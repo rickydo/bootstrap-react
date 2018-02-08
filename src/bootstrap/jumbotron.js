@@ -1,7 +1,7 @@
 import React from 'react';
 import {classify} from './utils';
 import Container from "./container";
-// import './jumbotron.scss'
+import './jumbotron.scss';
 
 export default class Jumbotron extends React.Component {
     render(){
