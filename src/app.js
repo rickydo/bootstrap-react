@@ -81,7 +81,7 @@ export default App;
 
 // whenever we send in props, we never change those props
 // UNLESS there is a change happening in parent
-// BUT a component will never change props on its own\
+// BUT a component will never change props on its own
 // the way props changes inside a component are via state
 
 // state is declared in the constructor
