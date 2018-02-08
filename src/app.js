@@ -1,11 +1,12 @@
 import React from 'react';
 import Button from './bootstrap/button';
 import Jumbotron from './bootstrap/jumbotron';
+import './appsource.css';
 
 class App extends React.Component {
     render(){
         return (
-            <Jumbotron className="-fluid text-md-center" style={{backgroundImage: 'url(img/tree-3097419_960_720.jpg', color:"white", backgroundSize:"cover"}} containerFluid={true}>
+            <Jumbotron className="-fluid text-md-center custom" containerFluid={true}>
                     <h1>Building React user interfaces </h1>
                     <p>with bootstrap and SASS</p>
                     <p>
