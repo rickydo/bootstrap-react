@@ -13,7 +13,7 @@ export default class Button extends React.Component {
             // can refactor to use below
             // {...this.props} = Spread parameter
 
-            <Tag {...this.props} className={className}> My Website </Tag>
+            <Tag {...this.props} className={className}> {this.props.label}</Tag>
         )
     }
 }

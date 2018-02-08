@@ -14,10 +14,10 @@ class App extends React.Component {
                         <h1>Building React user interfaces </h1>
                         <p>with bootstrap and SASS</p>
                         <p>
-                            <Button className="-primary" href="http://exceedingstatusdo.com" target="_blank" disabled/>
-                            <Button className="-outline-danger -sm" disabled/>
+                            <Button className="-primary" href="http://exceedingstatusdo.com" target="_blank" label="Button 1"/>
+                            <Button className="-danger -sm" label="Button 2"/>
                         </p>
-                        <Button className="-outline-primary -lg -block" disabled/>
+                        <Button className="-primary -lg -block" label="Button 3"/>
                 </Jumbotron>
             </ReactCSSTransitionGroup>
         )
