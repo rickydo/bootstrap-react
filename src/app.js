@@ -16,18 +16,32 @@ class App extends React.Component {
         this.onClick = this.onClick.bind(this);
 
         // you only approach this state directly inside the constructor
-        this.state = {click: 0};
+        this.state = {
+            click: 0,
+            labels: []
+        };
     }
 
     onClick(e){
         // then you approach it using setState
         // if you were to change the state directly, React will not know that 
         // it has happened
-        this.setState({click: this.state.click + 1})
+        let labels = this.state.labels.concat([this.state.click]);
+        this.setState({
+            click: this.state.click + 1,
+            labels: labels
+        })
         console.log();
     }
 
     render(){
+        // () => {} arrow function
+        // arrow functions bind 'this' from component 
+        // without arrow function 'this' is undefined
+        let buttons = this.state.labels.map((value, indx)=> {
+            // whenever using dynamic content, we have to set a unique key for rendering session
+            return <Button key={value}>{value}</Button>;
+        });
         return (
             <ReactCSSTransitionGroup transitionName='app' transitionAppear={true} 
                 transitionAppearTimeout={500} transitionEnterTimeout={500}
@@ -40,6 +54,12 @@ class App extends React.Component {
                             <Button className="-danger -sm" label="Button 2"/>
                         </p>
                     <Button onClick={this.onClick} className="-primary -lg -block" label={this.state.click}/>
+                    
+                    {/* another react transition group is necessary because the {buttons} are a deeper child */}
+                    <ReactCSSTransitionGroup transitionName='app'
+                        transitionEnterTimeout={5000} transitionLeaveTimeout={500}>
+                        {buttons}
+                    </ReactCSSTransitionGroup>
                 </Jumbotron>
             </ReactCSSTransitionGroup>
         )

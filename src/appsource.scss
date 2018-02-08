@@ -15,6 +15,7 @@ $text-color: yellow;
     @include background-it($image)
 }
 
+// for css animations
 .app-appear {
     opacity: 0.01;
 }
@@ -22,4 +23,13 @@ $text-color: yellow;
 .app-appear-active {
     opacity: 1;    
     transition: opacity .5s ease-in;
+}
+
+.app-enter {
+    opacity: 0.01;
+}
+
+.app-enter-active {
+    opacity: 1;    
+    transition: opacity 5s ease-in;
 }
