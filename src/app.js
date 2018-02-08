@@ -14,10 +14,17 @@ class App extends React.Component {
         // binding of this will now pass 'this' to onClick
         // otherwise onclick will return undefined
         this.onClick = this.onClick.bind(this);
+
+        // you only approach this state directly inside the constructor
+        this.state = {click: 0};
     }
 
     onClick(e){
-        console.log(this);
+        // then you approach it using setState
+        // if you were to change the state directly, React will not know that 
+        // it has happened
+        this.setState({click: this.state.click + 1})
+        console.log();
     }
 
     render(){
@@ -32,7 +39,7 @@ class App extends React.Component {
                             <Button className="-primary" href="http://exceedingstatusdo.com" target="_blank" label="Button 1"/>
                             <Button className="-danger -sm" label="Button 2"/>
                         </p>
-                        <Button onClick={this.onClick} className="-primary -lg -block" label="Button 3"/>
+                    <Button onClick={this.onClick} className="-primary -lg -block" label={this.state.click}/>
                 </Jumbotron>
             </ReactCSSTransitionGroup>
         )
@@ -40,3 +47,13 @@ class App extends React.Component {
 }
 
 export default App;
+
+// props are perfect in scenarios where components itself doesnt need to be aware of a change that it might have
+// state are for when you want components to be aware of changes happening within itself
+
+// whenever we send in props, we never change those props
+// UNLESS there is a change happening in parent
+// BUT a component will never change props on its own\
+// the way props changes inside a component are via state
+
+// state is declared in the constructor
