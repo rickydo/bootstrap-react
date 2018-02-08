@@ -9,7 +9,7 @@ class App extends React.Component {
             <p>with bootstrap and SASS</p>
             <p>
                 <Button className="btn btn-primary" href="http://exceedingstatusdo.com" target="_blank"/>
-                <Button className="btn btn-danger" href="http://exceedingstatusdo.com"/>
+                <Button className="btn btn-danger" />
             </p>
 
         </div>
