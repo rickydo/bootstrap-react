@@ -1,4 +1,4 @@
-// add btn to classes
+// add key to classes
 export function classify(key, value){
     if(value[0]==='-') value = key+value;
 

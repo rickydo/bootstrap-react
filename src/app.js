@@ -6,7 +6,6 @@ class App extends React.Component {
     render(){
         return (
             <Jumbotron className="-fluid text-md-center" style={{backgroundImage: 'url(img/tree-3097419_960_720.jpg', color:"white"}}>
-                <div className="container">
                     <h1>Building React user interfaces </h1>
                     <p>with bootstrap and SASS</p>
                     <p>
@@ -14,7 +13,6 @@ class App extends React.Component {
                         <Button className="-outline-danger -sm" disabled/>
                     </p>
                     <Button className="-outline-primary -lg -block" disabled/>
-                </div>
             </Jumbotron>
         )
     }
