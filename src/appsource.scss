@@ -5,6 +5,7 @@
 @mixin background-it($path){
     background-image: $path;
     color:white;
+    background-size: cover;
 }
 
 $image: url(/img/tree-3097419_960_720.jpg);
@@ -12,7 +13,13 @@ $text-color: yellow;
 
 .custom {
     @include background-it($image)
-    // background-image: $image; 
-    // color: $text-color; 
-    // background-size: cover;
+}
+
+.app-appear {
+    opacity: 0.01;
+}
+
+.app-appear-active {
+    opacity: 1;    
+    transition: opacity .5s ease-in;
 }
