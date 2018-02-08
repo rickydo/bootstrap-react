@@ -3,7 +3,7 @@ using NPM and Webpack.
 I also learned how to integrate SASS and bootstrap into the application along with animations.
 The end product was awesome. 
 
-##Some main points to remember with React:
+## Some main points to remember with React:
 1. Props are perfect in scenarios where components itself doesn't need to be aware of changes that it might have.
 2. States are for when you want components to be aware of changes happening within itself
 3. Whenever we send in props, we never change those props UNLESS there is a change happening in parent component. BUT a component will never change props on its own
